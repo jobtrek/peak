@@ -18,6 +18,10 @@ class UserResource extends Resource
 
     protected static ?string $navigationGroup = 'Administration';
 
+    protected static ?string $recordTitleAttribute = 'name';
+
+    protected static int $globalSearchResultsLimit = 10;
+
     protected static ?string $navigationIcon = 'heroicon-o-user';
 
     public static function form(Form $form): Form
@@ -79,5 +83,10 @@ class UserResource extends Resource
     public static function getPluralModelLabel(): string
     {
         return __('user.plural_label');
+    }
+
+    public static function getGloballySearchableAttributes(): array
+    {
+        return ['name', 'email'];
     }
 }

@@ -62,6 +62,7 @@ class AdminPanelProvider extends PanelProvider
                 FilamentShieldPlugin::make(),
             ])
             ->maxContentWidth(MaxWidth::Full)
-            ->spa();
+            ->spa()
+            ->globalSearchKeyBindings(['command+k', 'ctrl+k']);
     }
 }
