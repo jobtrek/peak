@@ -2,6 +2,7 @@
 
 namespace App\Providers\Filament;
 
+use BezhanSalleh\FilamentShield\FilamentShieldPlugin;
 use ChrisReedIO\Socialment\SocialmentPlugin;
 use Filament\Http\Middleware\Authenticate;
 use Filament\Http\Middleware\DisableBladeIconComponents;
@@ -58,7 +59,9 @@ class AdminPanelProvider extends PanelProvider
             ])
             ->plugins([
                 SocialmentPlugin::make(),
+                FilamentShieldPlugin::make(),
             ])
-            ->maxContentWidth(MaxWidth::Full);
+            ->maxContentWidth(MaxWidth::Full)
+            ->spa();
     }
 }
