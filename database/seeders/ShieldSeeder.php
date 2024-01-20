@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use BezhanSalleh\FilamentShield\Support\Utils;
+use Spatie\Permission\Models\Permission;
 use Spatie\Permission\PermissionRegistrar;
 
 class ShieldSeeder extends Seeder
@@ -17,6 +18,8 @@ class ShieldSeeder extends Seeder
 
         static::makeRolesWithPermissions($rolesWithPermissions);
         static::makeDirectPermissions($directPermissions);
+
+        Permission::create(['name' => 'access_horizon_dashboard', 'guard_name' => 'web']);
 
         $this->command->info('Shield Seeding Completed.');
     }

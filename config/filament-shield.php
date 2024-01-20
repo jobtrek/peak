@@ -46,6 +46,9 @@ return [
 
         'page' => 'page',
         'widget' => 'widget',
+        'custom' => [
+            'access_horizon_dashboard',
+        ],
     ],
 
     'entities' => [
