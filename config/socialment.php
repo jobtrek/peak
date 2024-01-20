@@ -7,10 +7,10 @@ return [
     // if it isn't one supported by the core Laravel Socialite package.
     'providers' => [
         // Use the key based on the provider's documentation
-        // 'azure' => [
-        // 	'icon' => 'fab-microsoft', // Font Awesome icon class
-        // 	'label' => 'Azure Active Directory', // The label to display for the provider
-        // ]
+        'azure' => [
+            'icon' => 'fab-microsoft', // Font Awesome icon class
+            'label' => 'Se connecter avec Microsoft 365', // The label to display for the provider
+        ],
     ],
 
     'view' => [
