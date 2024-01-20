@@ -7,6 +7,7 @@ use ChrisReedIO\Socialment\SocialmentPlugin;
 use Filament\Http\Middleware\Authenticate;
 use Filament\Http\Middleware\DisableBladeIconComponents;
 use Filament\Http\Middleware\DispatchServingFilamentEvent;
+use Filament\Navigation\NavigationItem;
 use Filament\Pages;
 use Filament\Panel;
 use Filament\PanelProvider;
@@ -64,6 +65,13 @@ class AdminPanelProvider extends PanelProvider
             ->maxContentWidth(MaxWidth::Full)
             ->spa()
             ->globalSearchKeyBindings(['command+k', 'ctrl+k'])
-            ->sidebarCollapsibleOnDesktop();
+            ->sidebarCollapsibleOnDesktop()
+            ->navigationItems([
+                // TODO: Add condition to display based on permission
+                NavigationItem::make('Horizon')
+                    ->icon('heroicon-o-chart-pie')
+                    ->url('/horizon')
+                    ->group('Administration'),
+            ]);
     }
 }
