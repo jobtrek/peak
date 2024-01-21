@@ -47,7 +47,7 @@ return [
         'page' => 'page',
         'widget' => 'widget',
         'custom' => [
-            'access_horizon_dashboard',
+            'access',
         ],
     ],
 
@@ -55,7 +55,7 @@ return [
         'pages' => true,
         'widgets' => true,
         'resources' => true,
-        'custom_permissions' => false,
+        'custom_permissions' => true,
     ],
 
     'generator' => [
