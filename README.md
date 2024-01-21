@@ -44,4 +44,10 @@ vendor/bin/sail artisan db:seed
 
 # Open the app in your browser
 http://localhost
+
+# Start queue worker if you want to use que jobs
+sail artisan horizon
+
+# To use pulse monitor
+sail artisan pulse:work
 ```

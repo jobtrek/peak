@@ -135,7 +135,7 @@ return [
     'recorders' => [
         Recorders\CacheInteractions::class => [
             'enabled' => env('PULSE_CACHE_INTERACTIONS_ENABLED', true),
-            'sample_rate' => env('PULSE_CACHE_INTERACTIONS_SAMPLE_RATE', 1),
+            'sample_rate' => env('PULSE_CACHE_INTERACTIONS_SAMPLE_RATE', 0.1),
             'ignore' => [
                 ...Pulse::defaultVendorCacheKeys(),
             ],
@@ -222,7 +222,7 @@ return [
 
         Recorders\UserRequests::class => [
             'enabled' => env('PULSE_USER_REQUESTS_ENABLED', true),
-            'sample_rate' => env('PULSE_USER_REQUESTS_SAMPLE_RATE', 1),
+            'sample_rate' => env('PULSE_USER_REQUESTS_SAMPLE_RATE', 0.1),
             'ignore' => [
                 '#^/pulse$#', // Pulse dashboard...
                 '#^/telescope#', // Telescope dashboard...
