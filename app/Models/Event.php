@@ -30,7 +30,7 @@ class Event extends Model
         );
     }
 
-    public function owner(): BelongsTo
+    public function creator(): BelongsTo
     {
         return $this->belongsTo(
             User::class,
