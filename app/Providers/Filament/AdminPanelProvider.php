@@ -68,12 +68,18 @@ class AdminPanelProvider extends PanelProvider
             ->globalSearchKeyBindings(['command+k', 'ctrl+k'])
             ->sidebarCollapsibleOnDesktop()
             ->navigationItems([
-                // TODO: Add condition to display based on permission
                 NavigationItem::make('Horizon')
                     ->icon('heroicon-o-rocket-launch')
                     ->url('/horizon')
+                    ->openUrlInNewTab(true)
                     ->group('Administration')
                     ->visible(fn (): bool => auth()->user()->can('access_horizon_dashboard')),
+                NavigationItem::make('Pulse')
+                    ->icon('heroicon-o-heart')
+                    ->url('/pulse')
+                    ->openUrlInNewTab(true)
+                    ->group('Administration')
+                    ->visible(fn (): bool => auth()->user()->can('access_pulse_dashboard')),
             ]);
     }
 }
