@@ -16,4 +16,4 @@ jobs:
       - uses: google-github-actions/release-please-action@v4
         with:
           token: ${{ secrets.PEAK_RELEASE_PLEASE_TOKEN }}
-          release-type: php
+          manifest-file: .release-please-manifest.json
