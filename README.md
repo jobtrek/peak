@@ -30,11 +30,17 @@ vendor/bin/sail artisan key:generate
 # Run migrations
 vendor/bin/sail artisan migrate
 
-# Generate database initial data
-vendor/bin/sail artisan db:seed
-
-# Create one user
+# Create one user / Or directly connect to the app with microsoft
 vendor/bin/sail artisan make:filament-user
+
+# Add admin role to the user
+vendor/bin/sail artisan shield:super-admin
+
+# Generate database initial data
+vendor/bin/sail artisan shield:generate -all
+
+# Seed custom data to db
+vendor/bin/sail artisan db:seed
 
 # Open the app in your browser
 http://localhost
