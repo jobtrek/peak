@@ -13,7 +13,7 @@ class EventTypePolicy
      */
     public function viewAny(User $user): bool
     {
-        //
+        return $user->can('view_any_event_type');
     }
 
     /**
@@ -21,7 +21,7 @@ class EventTypePolicy
      */
     public function view(User $user, EventType $eventType): bool
     {
-        //
+        return $user->can('view_event_type');
     }
 
     /**
@@ -29,7 +29,7 @@ class EventTypePolicy
      */
     public function create(User $user): bool
     {
-        //
+        return $user->can('create_event_type');
     }
 
     /**
@@ -37,7 +37,7 @@ class EventTypePolicy
      */
     public function update(User $user, EventType $eventType): bool
     {
-        //
+        return $user->can('update_event_type');
     }
 
     /**
@@ -45,7 +45,7 @@ class EventTypePolicy
      */
     public function delete(User $user, EventType $eventType): bool
     {
-        //
+        return $user->can('delete_event_type');
     }
 
     /**
@@ -53,7 +53,7 @@ class EventTypePolicy
      */
     public function restore(User $user, EventType $eventType): bool
     {
-        //
+        return $user->can('restore_event_type');
     }
 
     /**
@@ -61,6 +61,6 @@ class EventTypePolicy
      */
     public function forceDelete(User $user, EventType $eventType): bool
     {
-        //
+        return $user->can('force_delete_event_type');
     }
 }

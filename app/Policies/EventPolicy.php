@@ -13,7 +13,7 @@ class EventPolicy
      */
     public function viewAny(User $user): bool
     {
-        //
+        return $user->can('view_any_event');
     }
 
     /**
@@ -21,7 +21,7 @@ class EventPolicy
      */
     public function view(User $user, Event $event): bool
     {
-        //
+        return $user->can('view_event');
     }
 
     /**
@@ -29,7 +29,7 @@ class EventPolicy
      */
     public function create(User $user): bool
     {
-        //
+        return $user->can('create_event');
     }
 
     /**
@@ -37,7 +37,7 @@ class EventPolicy
      */
     public function update(User $user, Event $event): bool
     {
-        //
+        return $user->can('update_event');
     }
 
     /**
@@ -45,7 +45,7 @@ class EventPolicy
      */
     public function delete(User $user, Event $event): bool
     {
-        //
+        return $user->can('delete_event');
     }
 
     /**
@@ -53,7 +53,7 @@ class EventPolicy
      */
     public function restore(User $user, Event $event): bool
     {
-        //
+        return $user->can('restore_event');
     }
 
     /**
@@ -61,6 +61,6 @@ class EventPolicy
      */
     public function forceDelete(User $user, Event $event): bool
     {
-        //
+        return $user->can('force_delete_event');
     }
 }
