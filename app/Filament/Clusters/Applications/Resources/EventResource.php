@@ -144,14 +144,23 @@ class EventResource extends Resource
                     Tables\Actions\DeleteBulkAction::make(),
                 ]),
             ])
-            ->defaultSort('start_at', 'desc')
+            ->defaultSort('start_at', 'asc')
             ->persistSortInSession();
     }
+
 
     public static function getRelations(): array
     {
         return [
             EventTypesRelationManager::class,
+        ];
+    }
+
+    #[\Override]
+    public static function getWidgets(): array
+    {
+        return [
+            Applications\Resources\EventResource\Widgets\EventOverview::class,
         ];
     }
 
