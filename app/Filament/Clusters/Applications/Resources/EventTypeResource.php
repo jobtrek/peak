@@ -66,7 +66,7 @@ class EventTypeResource extends Resource
     public static function getRelations(): array
     {
         return [
-            //
+            Applications\Resources\EventTypeResource\RelationManagers\EventsRelationManager::class,
         ];
     }
 

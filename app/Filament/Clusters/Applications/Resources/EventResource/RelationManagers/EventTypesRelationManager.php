@@ -16,16 +16,6 @@ class EventTypesRelationManager extends RelationManager
 
     protected static ?string $title = 'Type de l\'événement';
 
-    public function form(Form $form): Form
-    {
-        return $form
-            ->schema([
-                Forms\Components\TextInput::make('name')
-                    ->required()
-                    ->unique()
-                    ->maxLength(100),
-            ]);
-    }
 
     public function table(Table $table): Table
     {
