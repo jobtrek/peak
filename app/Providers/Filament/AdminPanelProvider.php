@@ -69,9 +69,10 @@ class AdminPanelProvider extends PanelProvider
             ->navigationItems([
                 // TODO: Add condition to display based on permission
                 NavigationItem::make('Horizon')
-                    ->icon('heroicon-o-chart-pie')
+                    ->icon('heroicon-o-rocket-launch')
                     ->url('/horizon')
-                    ->group('Administration'),
+                    ->group('Administration')
+                    ->visible(fn (): bool => auth()->user()->can('access_horizon_dashboard')),
             ]);
     }
 }

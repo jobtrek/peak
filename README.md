@@ -30,6 +30,9 @@ vendor/bin/sail artisan key:generate
 # Run migrations
 vendor/bin/sail artisan migrate
 
+# Generate database initial data
+vendor/bin/sail artisan db:seed
+
 # Create one user
 vendor/bin/sail artisan make:filament-user
 
