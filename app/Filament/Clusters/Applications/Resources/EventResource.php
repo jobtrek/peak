@@ -4,6 +4,7 @@ namespace App\Filament\Clusters\Applications\Resources;
 
 use App\Filament\Clusters\Applications;
 use App\Filament\Clusters\Applications\Resources\EventResource\Pages;
+use App\Filament\Clusters\Applications\Resources\EventResource\RelationManagers\EventTypesRelationManager;
 use App\Models\Event;
 use Filament\Forms;
 use Filament\Forms\Components\DatePicker;
@@ -31,46 +32,42 @@ class EventResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\TextInput::make('name')
-                    ->autofocus()
-                    ->required()
-                    ->minLength(3)
-                    ->maxLength(230)
-                    ->label(__('event.name_label'))
-                    ->placeholder(__('event.name_placeholder')),
-                Forms\Components\Fieldset::make('Dates')
+                Forms\Components\Section::make()
+                    ->columns(1)
                     ->schema([
-                        Forms\Components\DateTimePicker::make('start_at')
+                        Forms\Components\TextInput::make('name')
+                            ->autofocus()
                             ->required()
-                            ->native(false)
-                            ->hoursStep(1)
-                            ->minutesStep(15)
-                            ->minDate(now()->startOfDay())
-                            ->maxDate(now()->addYear(2))
-                            ->closeOnDateSelection()
-                            ->seconds(false)
-                            ->label(__('event.start_at_label')),
-                        Forms\Components\DateTimePicker::make('end_at')
-                            ->required()
-                            ->native(false)
-                            ->hoursStep(1)
-                            ->minutesStep(15)
-                            ->minDate(now()->startOfDay())
-                            ->maxDate(now()->addYear(2))
-                            ->after('start_at')
-                            ->closeOnDateSelection()
-                            ->seconds(false)
-                            ->label(__('event.end_at_label')),
-                    ])
-                    ->columns(2),
-                Forms\Components\Fieldset::make('Types de l\'événement')
-                    ->schema([
-                        Forms\Components\Select::make('eventTypes')
-                            ->relationship('eventTypes', 'name')
-                            ->multiple()
-                            ->searchable(),
-                    ])
-                    ->columns(1),
+                            ->minLength(3)
+                            ->maxLength(230)
+                            ->label(__('event.name_label'))
+                            ->placeholder(__('event.name_placeholder')),
+                        Forms\Components\Fieldset::make('Dates')
+                            ->schema([
+                                Forms\Components\DateTimePicker::make('start_at')
+                                    ->required()
+                                    ->native(false)
+                                    ->hoursStep(1)
+                                    ->minutesStep(15)
+                                    ->minDate(now()->startOfDay())
+                                    ->maxDate(now()->addYear(2))
+                                    ->closeOnDateSelection()
+                                    ->seconds(false)
+                                    ->label(__('event.start_at_label')),
+                                Forms\Components\DateTimePicker::make('end_at')
+                                    ->required()
+                                    ->native(false)
+                                    ->hoursStep(1)
+                                    ->minutesStep(15)
+                                    ->minDate(now()->startOfDay())
+                                    ->maxDate(now()->addYear(2))
+                                    ->after('start_at')
+                                    ->closeOnDateSelection()
+                                    ->seconds(false)
+                                    ->label(__('event.end_at_label')),
+                            ])
+                            ->columns(2),
+                    ]),
             ]);
     }
 
@@ -95,6 +92,7 @@ class EventResource extends Resource
                     ->label(__('event.end_at_label')),
                 Tables\Columns\TextColumn::make('eventTypes.name')
                     ->searchable()
+                    ->badge()
                     ->sortable()
                     ->alignEnd(),
                 Tables\Columns\TextColumn::make('creator.name')
@@ -140,7 +138,7 @@ class EventResource extends Resource
     public static function getRelations(): array
     {
         return [
-            //
+            EventTypesRelationManager::class,
         ];
     }
 
