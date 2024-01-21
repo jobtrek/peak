@@ -8,4 +8,5 @@ return [
     'start_at_label' => 'Début de l\'événement',
     'end_at_label' => 'Fin de l\'événement',
     'creator_label' => 'Créateur',
+    'type' => 'Type',
 ];

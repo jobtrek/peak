@@ -67,6 +67,18 @@ class EventResource extends Resource
                                     ->label(__('event.end_at_label')),
                             ])
                             ->columns(2),
+                        Forms\Components\Fieldset::make('Associer à au minimum un type d\'événement')
+                            ->schema([
+                                Forms\Components\Select::make('event_type_id')
+                                    ->required()
+                                    ->searchable()
+                                    ->multiple()
+                                    ->preload()
+                                    ->relationship('eventTypes', 'name')
+                                    ->label(__('event.type')),
+                            ])
+                            ->columns(1)
+                            ->hiddenOn('edit'),
                     ]),
             ]);
     }
@@ -91,6 +103,7 @@ class EventResource extends Resource
                     ->dateTime('Y-m-d H:i')
                     ->label(__('event.end_at_label')),
                 Tables\Columns\TextColumn::make('eventTypes.name')
+                    ->label(__('event.type'))
                     ->searchable()
                     ->badge()
                     ->sortable()
