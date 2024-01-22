@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Concerns\HasUuids;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -19,6 +20,18 @@ class Event extends Model
         'end_at',
         'creator_id',
     ];
+
+    protected $casts = [
+        'start_at' => 'datetime',
+        'end_at' => 'datetime',
+    ];
+
+    protected function startAtForHumans(): Attribute
+    {
+        return Attribute::make(
+            get: fn () => $this->start_at->diffForHumans(),
+        );
+    }
 
     public function eventTypes(): BelongsToMany
     {

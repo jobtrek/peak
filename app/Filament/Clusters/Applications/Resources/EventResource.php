@@ -92,15 +92,17 @@ class EventResource extends Resource
                     ->sortable()
                     ->limit(80)
                     ->label(__('event.name_label')),
+                Tables\Columns\TextColumn::make('startAtForHumans')
+                    ->label('Débute dans'),
                 Tables\Columns\TextColumn::make('start_at')
                     ->searchable()
                     ->sortable()
-                    ->dateTime('Y-m-d H:i')
+                    ->dateTime('d M Y - H:i')
                     ->label(__('event.start_at_label')),
                 Tables\Columns\TextColumn::make('end_at')
                     ->searchable()
                     ->sortable()
-                    ->dateTime('Y-m-d H:i')
+                    ->dateTime('d M Y - H:i')
                     ->label(__('event.end_at_label')),
                 Tables\Columns\TextColumn::make('eventTypes.name')
                     ->label(__('event.type'))
@@ -112,7 +114,8 @@ class EventResource extends Resource
                     ->label(__('event.creator_label'))
                     ->searchable()
                     ->sortable()
-                    ->alignEnd(),
+                    ->alignEnd()
+                    ->toggleable(),
             ])
             ->filters([
                 SelectFilter::make('eventTypes')
@@ -137,7 +140,6 @@ class EventResource extends Resource
                     }),
             ])
             ->actions([
-                Tables\Actions\EditAction::make(),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
@@ -147,7 +149,6 @@ class EventResource extends Resource
             ->defaultSort('start_at', 'asc')
             ->persistSortInSession();
     }
-
 
     public static function getRelations(): array
     {

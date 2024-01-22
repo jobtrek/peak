@@ -12,20 +12,28 @@ class EventOverview extends BaseWidget
     protected function getStats(): array
     {
         $event = Trend::model(Event::class)
+            ->dateColumn('start_at')
             ->between(
                 start: now()->startOfWeek(),
-                end: now()->endOfDay()
+                end: now()->endOfWeek()
             )
             ->perDay()
             ->count();
         $event = $event->map(fn ($value) => $value->aggregate);
 
+        $total = $event->sum();
+
+        $stat = Stat::make('Événements de la semaine', $total)
+            ->icon('heroicon-o-calendar')
+            ->description('Du '.now()->startOfWeek()->format('d/m/Y').' au '.now()->endOfWeek()->format('d/m/Y'))
+            ->color('info');
+
+        if ($total > 0) {
+            $stat->chart($event->toArray());
+        }
+
         return [
-            Stat::make('Événements', $event->sum())
-                ->description("Nombre d'événements dans le système")
-                ->descriptionIcon('heroicon-o-calendar')
-                ->color('info')
-                ->chart($event->toArray()),
+            $stat,
         ];
     }
 }
