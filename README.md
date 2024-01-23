@@ -37,7 +37,7 @@ vendor/bin/sail artisan make:filament-user
 vendor/bin/sail artisan shield:super-admin
 
 # Generate database initial data
-vendor/bin/sail artisan shield:generate -all
+vendor/bin/sail artisan shield:generate --all
 
 # Seed custom data to db
 vendor/bin/sail artisan db:seed
