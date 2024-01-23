@@ -14,8 +14,8 @@ class EventOverview extends BaseWidget
         $event = Trend::model(Event::class)
             ->dateColumn('start_at')
             ->between(
-                start: now()->startOfWeek(),
-                end: now()->endOfWeek()
+                start: now()->startOfMonth(),
+                end: now()->endOfMonth()
             )
             ->perDay()
             ->count();
@@ -25,7 +25,7 @@ class EventOverview extends BaseWidget
 
         $stat = Stat::make('Événements de la semaine', $total)
             ->icon('heroicon-o-calendar')
-            ->description('Du '.now()->startOfWeek()->format('d/m/Y').' au '.now()->endOfWeek()->format('d/m/Y'))
+            ->description('Du '.now()->startOfMonth()->format('d/m/Y').' au '.now()->endOfMonth()->format('d/m/Y'))
             ->color('info');
 
         if ($total > 0) {
