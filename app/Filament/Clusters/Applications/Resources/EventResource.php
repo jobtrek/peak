@@ -6,15 +6,18 @@ use App\Filament\Clusters\Applications;
 use App\Filament\Clusters\Applications\Resources\EventResource\Pages;
 use App\Filament\Clusters\Applications\Resources\EventResource\RelationManagers\EventTypesRelationManager;
 use App\Models\Event;
+use Carbon\Carbon;
 use Filament\Forms;
 use Filament\Forms\Components\DatePicker;
 use Filament\Forms\Form;
+use Filament\Forms\Get;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Filters\Filter;
 use Filament\Tables\Filters\SelectFilter;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\Model;
 
 class EventResource extends Resource
 {
@@ -53,13 +56,15 @@ class EventResource extends Resource
                                     ->maxDate(now()->addYear(2))
                                     ->closeOnDateSelection()
                                     ->seconds(false)
-                                    ->label(__('event.start_at_label')),
+                                    ->label(__('event.start_at_label'))
+                                    ->live(onBlur: true),
                                 Forms\Components\DateTimePicker::make('end_at')
+                                    ->disabled(fn (Get $get): bool => ! $get('start_at'))
                                     ->required()
                                     ->native(false)
                                     ->hoursStep(1)
                                     ->minutesStep(15)
-                                    ->minDate(now()->startOfDay())
+                                    ->minDate(fn (Get $get) => $get('start_at') ? Carbon::parse($get('start_at'))->addMinutes(5) : now()->startOfDay())
                                     ->maxDate(now()->addYear(2))
                                     ->after('start_at')
                                     ->closeOnDateSelection()
