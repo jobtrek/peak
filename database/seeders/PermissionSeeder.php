@@ -18,5 +18,10 @@ class PermissionSeeder extends Seeder
             'name' => 'access_horizon_dashboard',
             'guard_name' => 'web',
         ]);
+        // Custom permission for pulse dashboard
+        Permission::create([
+            'name' => 'access_pulse_dashboard',
+            'guard_name' => 'web',
+        ]);
     }
 }
