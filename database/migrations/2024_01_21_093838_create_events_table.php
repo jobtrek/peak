@@ -17,7 +17,6 @@ return new class extends Migration
             $table->timestamp('start_at');
             $table->timestamp('end_at');
             $table->foreignUuid('creator_id')->constrained('users');
-            $table->softDeletes();
             $table->timestamps();
         });
     }
