@@ -19,12 +19,15 @@ class ListEvents extends ListRecords
         ];
     }
 
+    /** No tabs for now
     public function getTabs(): array
     {
         return [
             'all' => Tab::make('Tous les événements'),
-            'next' => Tab::make('Depuis aujourd\'hui')
+            'from-today' => Tab::make('Depuis aujourd\'hui')
                 ->modifyQueryUsing(fn (Builder $query) => $query->whereDate('start_at', '>=', now()->startOfDay())),
+            'before-today' => Tab::make('Evénements passés')
+                ->modifyQueryUsing(fn (Builder $query) => $query->whereDate('end_at', '<', now())),
         ];
-    }
+    }*/
 }

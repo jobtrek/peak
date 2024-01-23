@@ -14,10 +14,10 @@ use Filament\Forms\Get;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Filters\Filter;
+use Filament\Tables\Filters\Indicator;
 use Filament\Tables\Filters\SelectFilter;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\Model;
 
 class EventResource extends Resource
 {
@@ -64,7 +64,11 @@ class EventResource extends Resource
                                     ->native(false)
                                     ->hoursStep(1)
                                     ->minutesStep(15)
-                                    ->minDate(fn (Get $get) => $get('start_at') ? Carbon::parse($get('start_at'))->addMinutes(5) : now()->startOfDay())
+                                    ->minDate(
+                                        fn (Get $get) => $get('start_at') ? Carbon::parse($get('start_at'))->addMinutes(
+                                            5
+                                        ) : now()->startOfDay()
+                                    )
                                     ->maxDate(now()->addYear(2))
                                     ->after('start_at')
                                     ->closeOnDateSelection()
@@ -98,7 +102,8 @@ class EventResource extends Resource
                     ->limit(80)
                     ->label(__('event.name_label')),
                 Tables\Columns\TextColumn::make('startAtForHumans')
-                    ->label('Débute dans'),
+                    ->label('Débute')
+                    ->toggleable(),
                 Tables\Columns\TextColumn::make('start_at')
                     ->searchable()
                     ->sortable()
@@ -124,13 +129,18 @@ class EventResource extends Resource
             ])
             ->filters([
                 SelectFilter::make('eventTypes')
+                    ->label('Type de l\'événement')
                     ->relationship('eventTypes', 'name')
                     ->searchable()
                     ->preload(),
-                Filter::make('created_at')
+                Filter::make('Temporalité')
                     ->form([
-                        DatePicker::make('start_at'),
-                        DatePicker::make('end_at'),
+                        DatePicker::make('start_at')
+                            ->label('Début')
+                            ->default(now()->startOfMonth()),
+                        DatePicker::make('end_at')
+                            ->label('Fin')
+                            ->default(now()->endOfMonth()),
                     ])
                     ->query(function (Builder $query, array $data): Builder {
                         return $query
@@ -142,8 +152,31 @@ class EventResource extends Resource
                                 $data['end_at'],
                                 fn (Builder $query, $date): Builder => $query->whereDate('end_at', '<=', $date),
                             );
-                    }),
+                    })
+                    ->indicateUsing(function (array $data): array {
+                        $indicators = [];
+
+                        if ($data['start_at'] ?? null) {
+                            $indicators[] = Indicator::make(
+                                'Created from '.Carbon::parse($data['start_at'])
+                                    ->toFormattedDateString()
+                            )
+                                ->removeField('start_at');
+                        }
+
+                        if ($data['end_at'] ?? null) {
+                            $indicators[] = Indicator::make(
+                                'Created until '.Carbon::parse($data['end_at'])
+                                    ->toFormattedDateString()
+                            )
+                                ->removeField('end_at');
+                        }
+
+                        return $indicators;
+                    })
+                    ->default(),
             ])
+            ->filtersFormColumns(2)
             ->actions([
             ])
             ->bulkActions([
