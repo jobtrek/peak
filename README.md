@@ -1,6 +1,8 @@
 # Peak
 
 > Fully experimental app.
+>
+> Version 0.1.1 <!-- x-release-please-version -->
 
 ## Development
 
