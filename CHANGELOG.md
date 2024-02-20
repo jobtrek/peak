@@ -1,5 +1,52 @@
 # Changelog
 
+## [0.1.2](https://github.com/jobtrek/peak/compare/v0.1.1...v0.1.2) (2024-02-20)
+
+
+### Features
+
+* Add constraint to prevent adding end date below start date ([8a0dc86](https://github.com/jobtrek/peak/commit/8a0dc8635d7b021d0ddaabf652051ec2967dd57d))
+* Add custom default colors ([587943f](https://github.com/jobtrek/peak/commit/587943f5f4e5da60ffb8138fd2936408fab2cda3))
+* Add notification configuration ([4bbd14a](https://github.com/jobtrek/peak/commit/4bbd14a1fa7f505978e44d3fc994408aadc50613))
+* **events:** Add default event filer for current month ([3f96d56](https://github.com/jobtrek/peak/commit/3f96d56537b460bc535e48ca6b1d37d670b8f4d5))
+* **events:** Display events total for week ([853f07e](https://github.com/jobtrek/peak/commit/853f07ecedd156d54fccac72a243a8151266019e))
+* **events:** Widget show events of the month ([fedc1fd](https://github.com/jobtrek/peak/commit/fedc1fd31120ea17ccda1bcc47c163bb78ba0352))
+
+
+### Bug Fixes
+
+* Add missing pulse dashboard permission in seeder ([79463cc](https://github.com/jobtrek/peak/commit/79463cc30c6b756633e082df1f24a5c3fce6c9e3))
+* **events:** Add force delete possibility ([058ce52](https://github.com/jobtrek/peak/commit/058ce5209a9fc834b85905b30f841099fd4b5757))
+* remove soft deletes actions on event type ([f3706d2](https://github.com/jobtrek/peak/commit/f3706d22d41c8019d533f49e82cb38f6c46693cf))
+* Remove soft deletes to avoid unnecessary complexity on tables ([83e52e5](https://github.com/jobtrek/peak/commit/83e52e5402d0ca87e282f3a2c4fd9f9cffa062d7))
+
+
+### Miscellaneous Chores
+
+* add dependabot configuration ([#13](https://github.com/jobtrek/peak/issues/13)) ([4df9e27](https://github.com/jobtrek/peak/commit/4df9e27a0327d4d28fc3b941b644f8e3bdbb6135))
+* dependencies update ([7f80ab7](https://github.com/jobtrek/peak/commit/7f80ab7402a0eea5b6c2b9d5c17fa49ab8c80245))
+* dependencies update ([a175b1a](https://github.com/jobtrek/peak/commit/a175b1a6566398d4b2e840204a2da4d006a57fce))
+* Update filament to 3.10 ([bd2c212](https://github.com/jobtrek/peak/commit/bd2c2128edb502c544a42c0d2f6f193f42f71035))
+
+
+### Build System
+
+* Added custom docker config to run horizon and pulse ingest ([e4b039f](https://github.com/jobtrek/peak/commit/e4b039f452df16d5b19f18110bddddf858eed16b)), closes [#6](https://github.com/jobtrek/peak/issues/6)
+* **deps-dev:** bump laravel/pint from 1.13.10 to 1.13.11 ([#24](https://github.com/jobtrek/peak/issues/24)) ([0b5057d](https://github.com/jobtrek/peak/commit/0b5057dec155734682d4673b62252562de9d127a))
+* **deps-dev:** bump laravel/sail from 1.27.2 to 1.27.3 ([#16](https://github.com/jobtrek/peak/issues/16)) ([f3111e6](https://github.com/jobtrek/peak/commit/f3111e6e96279213713daad69f651f05734fadfa))
+* **deps-dev:** bump laravel/sail from 1.27.3 to 1.27.4 ([#25](https://github.com/jobtrek/peak/issues/25)) ([07f8e4b](https://github.com/jobtrek/peak/commit/07f8e4bea8b26f69ec842d986876b566735342e0))
+* **deps-dev:** bump spatie/laravel-ignition from 2.4.1 to 2.4.2 ([#20](https://github.com/jobtrek/peak/issues/20)) ([b849997](https://github.com/jobtrek/peak/commit/b84999765af801a167baabb81c1d8f10fbef9029))
+* **deps:** bump filament/filament from 3.2.13 to 3.2.24 ([#15](https://github.com/jobtrek/peak/issues/15)) ([d642342](https://github.com/jobtrek/peak/commit/d642342bfb83f92d0fb9eb7465a801ba28f18ad6))
+* **deps:** bump filament/filament from 3.2.24 to 3.2.31 ([#19](https://github.com/jobtrek/peak/issues/19)) ([72371c0](https://github.com/jobtrek/peak/commit/72371c0b97c3a2bd8d7a0d9a9ee9c7f5f634cf6b))
+* **deps:** bump laravel/framework from 10.42.0 to 10.43.0 ([#18](https://github.com/jobtrek/peak/issues/18)) ([dcb08d3](https://github.com/jobtrek/peak/commit/dcb08d347a85f3f7f4dc5763f453c181e7318ed0))
+* **deps:** bump laravel/horizon from 5.22.0 to 5.22.1 ([#17](https://github.com/jobtrek/peak/issues/17)) ([3c990fc](https://github.com/jobtrek/peak/commit/3c990fc8745d48dc3f06c7f5ce9326b0b5096568))
+* **deps:** bump laravel/horizon from 5.22.1 to 5.23.0 ([#23](https://github.com/jobtrek/peak/issues/23)) ([279bd9a](https://github.com/jobtrek/peak/commit/279bd9a8fb9ed627f5566d7bfda061896467ca69))
+
+
+### Continuous Integration
+
+* new changelog release please template ([#27](https://github.com/jobtrek/peak/issues/27)) ([503621e](https://github.com/jobtrek/peak/commit/503621e647c8f905ebbb83387b44748cfeb94667))
+
 ## [0.1.1](https://github.com/jobtrek/peak/compare/v0.1.0...v0.1.1) (2024-01-21)
 
 
