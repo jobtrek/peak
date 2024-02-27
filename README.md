@@ -2,7 +2,7 @@
 
 > Fully experimental app.
 >
-> Version 0.1.2 <!-- x-release-please-version -->
+> Version 0.1.3 <!-- x-release-please-version -->
 
 ## Development
 
