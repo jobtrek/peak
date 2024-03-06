@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.1.4](https://github.com/jobtrek/peak/compare/v0.1.3...v0.1.4) (2024-03-06)
+
+
+### Build System
+
+* **deps-dev:** bump laravel/sail from 1.28.0 to 1.28.1 ([#37](https://github.com/jobtrek/peak/issues/37)) ([207a6d3](https://github.com/jobtrek/peak/commit/207a6d3d5e03797fc99b4a08f37ee2d5c26e591d))
+* **deps-dev:** bump phpunit/phpunit from 10.5.10 to 10.5.11 ([#35](https://github.com/jobtrek/peak/issues/35)) ([e63f367](https://github.com/jobtrek/peak/commit/e63f36749e355b93d5b04cdb9bb8982f5277deb7))
+* **deps:** bump filament/filament from 3.2.37 to 3.2.44 ([#40](https://github.com/jobtrek/peak/issues/40)) ([5d2e27d](https://github.com/jobtrek/peak/commit/5d2e27d3009e08110bcafb721d5d2118bf40ccae))
+* **deps:** bump laravel/framework from 10.46.0 to 10.47.0 ([#39](https://github.com/jobtrek/peak/issues/39)) ([c7853d5](https://github.com/jobtrek/peak/commit/c7853d5b64a88e46881b19eb2eecc538ae34eabd))
+
 ## [0.1.3](https://github.com/jobtrek/peak/compare/v0.1.2...v0.1.3) (2024-02-27)
 
 
