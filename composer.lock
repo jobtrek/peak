@@ -433,32 +433,32 @@
         },
         {
             "name": "chrisreedio/socialment",
-            "version": "v3.4.1",
+            "version": "v3.6.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/chrisreedio/socialment.git",
-                "reference": "74aeb6fa677643b8a3ff9881b9be64889f768c1d"
+                "reference": "0e7691682ae222faa4775a9442a7516382ee8e22"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/chrisreedio/socialment/zipball/74aeb6fa677643b8a3ff9881b9be64889f768c1d",
-                "reference": "74aeb6fa677643b8a3ff9881b9be64889f768c1d",
+                "url": "https://api.github.com/repos/chrisreedio/socialment/zipball/0e7691682ae222faa4775a9442a7516382ee8e22",
+                "reference": "0e7691682ae222faa4775a9442a7516382ee8e22",
                 "shasum": ""
             },
             "require": {
                 "filament/filament": "^3.0",
-                "illuminate/contracts": "^10.0",
+                "illuminate/contracts": "^10.0|^11.0",
                 "laravel/socialite": "^5.8",
                 "owenvoke/blade-fontawesome": "^2.4",
                 "php": "^8.1",
                 "spatie/laravel-package-tools": "^1.15.0"
             },
             "require-dev": {
-                "barryvdh/laravel-ide-helper": "^2.13",
+                "barryvdh/laravel-ide-helper": "^2.13|^3.0",
+                "larastan/larastan": "^2.9",
                 "laravel/pint": "^1.13",
-                "nunomaduro/collision": "^7.10",
-                "nunomaduro/larastan": "^2.1.1",
-                "orchestra/testbench": "^8.11",
+                "nunomaduro/collision": "^7.10|^8.0",
+                "orchestra/testbench": "^v8.14|^9.0",
                 "pestphp/pest": "^2.10",
                 "pestphp/pest-plugin-arch": "^2.0",
                 "pestphp/pest-plugin-laravel": "^2.0",
@@ -515,7 +515,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-11-16T23:16:26+00:00"
+            "time": "2024-03-20T08:26:07+00:00"
         },
         {
             "name": "danharrin/date-format-converter",
@@ -3056,16 +3056,16 @@
         },
         {
             "name": "laravel/socialite",
-            "version": "v5.11.0",
+            "version": "v5.12.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/socialite.git",
-                "reference": "4f6a8af6f3f7c18da03d19842dd0514315501c10"
+                "reference": "7dae1b072573809f32ab6dcf4aebb57c8b3e8acf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/socialite/zipball/4f6a8af6f3f7c18da03d19842dd0514315501c10",
-                "reference": "4f6a8af6f3f7c18da03d19842dd0514315501c10",
+                "url": "https://api.github.com/repos/laravel/socialite/zipball/7dae1b072573809f32ab6dcf4aebb57c8b3e8acf",
+                "reference": "7dae1b072573809f32ab6dcf4aebb57c8b3e8acf",
                 "shasum": ""
             },
             "require": {
@@ -3122,7 +3122,7 @@
                 "issues": "https://github.com/laravel/socialite/issues",
                 "source": "https://github.com/laravel/socialite"
             },
-            "time": "2023-12-02T18:22:36+00:00"
+            "time": "2024-02-16T08:58:20+00:00"
         },
         {
             "name": "laravel/tinker",
@@ -4659,27 +4659,27 @@
         },
         {
             "name": "owenvoke/blade-fontawesome",
-            "version": "v2.5.1",
+            "version": "v2.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/owenvoke/blade-fontawesome.git",
-                "reference": "b3eac80b0f2f1b70083d4acea0da49350f88856e"
+                "reference": "86eddacc1b1be9791b3c8fca4a9ef77db6a07cdc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/owenvoke/blade-fontawesome/zipball/b3eac80b0f2f1b70083d4acea0da49350f88856e",
-                "reference": "b3eac80b0f2f1b70083d4acea0da49350f88856e",
+                "url": "https://api.github.com/repos/owenvoke/blade-fontawesome/zipball/86eddacc1b1be9791b3c8fca4a9ef77db6a07cdc",
+                "reference": "86eddacc1b1be9791b3c8fca4a9ef77db6a07cdc",
                 "shasum": ""
             },
             "require": {
                 "blade-ui-kit/blade-icons": "^1.5",
-                "illuminate/support": "^10.34",
+                "illuminate/support": "^10.34|^11.0",
                 "php": "^8.1",
                 "thecodingmachine/safe": "^2.5"
             },
             "require-dev": {
                 "laravel/pint": "^1.13",
-                "orchestra/testbench": "^8.12",
+                "orchestra/testbench": "^8.12|^9.0",
                 "pestphp/pest": "^2.26",
                 "phpstan/phpstan": "^1.10",
                 "symfony/var-dumper": "^6.3",
@@ -4705,7 +4705,7 @@
             "description": "A package to easily make use of Font Awesome in your Laravel Blade views",
             "support": {
                 "issues": "https://github.com/owenvoke/blade-fontawesome/issues",
-                "source": "https://github.com/owenvoke/blade-fontawesome/tree/v2.5.1"
+                "source": "https://github.com/owenvoke/blade-fontawesome/tree/v2.6.0"
             },
             "funding": [
                 {
@@ -4717,7 +4717,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-12-12T09:07:03+00:00"
+            "time": "2024-02-27T16:15:55+00:00"
         },
         {
             "name": "phpoption/phpoption",
