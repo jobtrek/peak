@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.1.5](https://github.com/jobtrek/peak/compare/v0.1.4...v0.1.5) (2024-03-22)
+
+
+### Build System
+
+* **deps-dev:** bump laravel/sail from 1.28.1 to 1.29.1 ([#56](https://github.com/jobtrek/peak/issues/56)) ([6dd5523](https://github.com/jobtrek/peak/commit/6dd5523c87b7c67701662ce39b303ec1a663a7cb))
+* **deps-dev:** bump mockery/mockery from 1.6.7 to 1.6.11 ([#53](https://github.com/jobtrek/peak/issues/53)) ([2d3e6e0](https://github.com/jobtrek/peak/commit/2d3e6e0bfc43fb30168f80c27cd4c53406a61e33))
+* **deps-dev:** bump phpunit/phpunit from 10.5.11 to 10.5.13 ([#46](https://github.com/jobtrek/peak/issues/46)) ([64aca5e](https://github.com/jobtrek/peak/commit/64aca5eb4f0484641662e4f24d649a52b49709d7))
+* **deps:** bump chrisreedio/socialment from 3.4.1 to 3.6.1 ([#54](https://github.com/jobtrek/peak/issues/54)) ([508becc](https://github.com/jobtrek/peak/commit/508becc58a341b1e2bc23dcc6f96669d6535e8ad))
+* **deps:** bump filament/filament from 3.2.44 to 3.2.58 ([#55](https://github.com/jobtrek/peak/issues/55)) ([e20d48f](https://github.com/jobtrek/peak/commit/e20d48f86862eadc9be955be98ea9709995c7622))
+* **deps:** bump laravel/pulse from 1.0.0-beta13 to 1.0.0-beta14 ([#44](https://github.com/jobtrek/peak/issues/44)) ([be92d01](https://github.com/jobtrek/peak/commit/be92d01ccfc96249349ca5c2986a848e8fed7a00))
+* **deps:** bump laravel/pulse from 1.0.0-beta14 to 1.0.0-beta15 ([#48](https://github.com/jobtrek/peak/issues/48)) ([1999cb4](https://github.com/jobtrek/peak/commit/1999cb48b8a693dddb71383a951d06a861ee570f))
+* **deps:** bump livewire/livewire from 3.4.8 to 3.4.9 ([#52](https://github.com/jobtrek/peak/issues/52)) ([38c5e04](https://github.com/jobtrek/peak/commit/38c5e04f71ea89fcbaa25511a22f84c3869a565c))
+
 ## [0.1.4](https://github.com/jobtrek/peak/compare/v0.1.3...v0.1.4) (2024-03-06)
 
 
