@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.1.6](https://github.com/jobtrek/peak/compare/v0.1.5...v0.1.6) (2024-03-28)
+
+
+### Build System
+
+* **deps-dev:** bump phpunit/phpunit from 10.5.13 to 10.5.15 ([#60](https://github.com/jobtrek/peak/issues/60)) ([49bafb6](https://github.com/jobtrek/peak/commit/49bafb6c15d12af2f129cb611358ea038442d52d))
+* **deps:** bump filament/filament from 3.2.58 to 3.2.60 ([#59](https://github.com/jobtrek/peak/issues/59)) ([aa3803f](https://github.com/jobtrek/peak/commit/aa3803ffa326793c93bb54a5c4df3605abeebfb1))
+* **deps:** bump flowframe/laravel-trend from 0.1.5 to 0.2.0 ([#57](https://github.com/jobtrek/peak/issues/57)) ([94bc7fa](https://github.com/jobtrek/peak/commit/94bc7fa1eafb18fa1ba9931876d4e780b71b21e2))
+* **deps:** bump socialiteproviders/microsoft-azure from 5.1.0 to 5.2.0 ([#58](https://github.com/jobtrek/peak/issues/58)) ([4fae839](https://github.com/jobtrek/peak/commit/4fae839482e809f1865ab5f7990e39065b3b3ddb))
+
 ## [0.1.5](https://github.com/jobtrek/peak/compare/v0.1.4...v0.1.5) (2024-03-22)
 
 
