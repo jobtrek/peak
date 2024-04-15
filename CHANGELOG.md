@@ -1,5 +1,16 @@
 # Changelog
 
+## [0.1.7](https://github.com/jobtrek/peak/compare/v0.1.6...v0.1.7) (2024-04-15)
+
+
+### Build System
+
+* **deps-dev:** bump phpunit/phpunit from 10.5.15 to 10.5.17 ([#67](https://github.com/jobtrek/peak/issues/67)) ([f88f396](https://github.com/jobtrek/peak/commit/f88f3967501f0476569bd9f0c5b6594bc3b91605))
+* **deps-dev:** bump spatie/laravel-ignition from 2.4.2 to 2.5.1 ([#69](https://github.com/jobtrek/peak/issues/69)) ([8046409](https://github.com/jobtrek/peak/commit/80464090c2cf0a411058746e7095c6c4a12c4543))
+* **deps:** bump bezhansalleh/filament-shield from 3.2.3 to 3.2.4 ([#66](https://github.com/jobtrek/peak/issues/66)) ([2100cbc](https://github.com/jobtrek/peak/commit/2100cbc66fddd32dbc4b5b6ed4a1ecd2ca3fe264))
+* **deps:** bump filament/filament from 3.2.61 to 3.2.66 ([#71](https://github.com/jobtrek/peak/issues/71)) ([a260ad1](https://github.com/jobtrek/peak/commit/a260ad14bae1f69001440333de7f4b469e9ccee9))
+* **deps:** bump laravel/pulse from 1.0.0-beta15 to 1.0.0-beta16 ([#64](https://github.com/jobtrek/peak/issues/64)) ([f28fee9](https://github.com/jobtrek/peak/commit/f28fee9829c28d628242ce9c06d9a76e4f26b72c))
+
 ## [0.1.6](https://github.com/jobtrek/peak/compare/v0.1.5...v0.1.6) (2024-03-28)
 
 
