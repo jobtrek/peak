@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.1.8](https://github.com/jobtrek/peak/compare/v0.1.7...v0.1.8) (2024-04-19)
+
+
+### Build System
+
+* **deps-dev:** bump laravel/pint from 1.14.0 to 1.15.1 ([#73](https://github.com/jobtrek/peak/issues/73)) ([2f3106e](https://github.com/jobtrek/peak/commit/2f3106e01c0e3d669672d1efd79c6e7a33a4c835))
+* **deps-dev:** bump phpunit/phpunit from 10.5.17 to 10.5.18 ([#74](https://github.com/jobtrek/peak/issues/74)) ([59864ac](https://github.com/jobtrek/peak/commit/59864ac32e6167c2e7a17cc71f9cb2a74b93906a))
+* **deps:** bump laravel/horizon from 5.23.1 to 5.24.0 ([#72](https://github.com/jobtrek/peak/issues/72)) ([cb1a94d](https://github.com/jobtrek/peak/commit/cb1a94dc64cd1d9653d04ab0172b51ee289c586d))
+
 ## [0.1.7](https://github.com/jobtrek/peak/compare/v0.1.6...v0.1.7) (2024-04-15)
 
 
