@@ -1,5 +1,16 @@
 # Changelog
 
+## [0.1.9](https://github.com/jobtrek/peak/compare/v0.1.8...v0.1.9) (2024-04-25)
+
+
+### Build System
+
+* **deps-dev:** bump phpunit/phpunit from 10.5.18 to 10.5.19 ([#78](https://github.com/jobtrek/peak/issues/78)) ([eda764a](https://github.com/jobtrek/peak/commit/eda764a22b476d728b79663fbdf3dda60d54b8fa))
+* **deps-dev:** bump spatie/laravel-ignition from 2.5.1 to 2.5.2 ([#79](https://github.com/jobtrek/peak/issues/79)) ([4257b01](https://github.com/jobtrek/peak/commit/4257b017d42149f9091f347eeb7c5289888498d9))
+* **deps:** bump filament/filament from 3.2.66 to 3.2.71 ([#76](https://github.com/jobtrek/peak/issues/76)) ([0ad0562](https://github.com/jobtrek/peak/commit/0ad0562c9221c3db8d98669ad2a6406971b84ede))
+* **deps:** bump laravel/framework from 10.48.7 to 10.48.8 ([#77](https://github.com/jobtrek/peak/issues/77)) ([b17d5ef](https://github.com/jobtrek/peak/commit/b17d5efb48054bbdf808b9b105d8f6edc1cc562c))
+* **deps:** bump laravel/horizon from 5.24.0 to 5.24.3 ([#82](https://github.com/jobtrek/peak/issues/82)) ([f6732cb](https://github.com/jobtrek/peak/commit/f6732cb459bc7ebdcb079357e215c73749e89377))
+
 ## [0.1.8](https://github.com/jobtrek/peak/compare/v0.1.7...v0.1.8) (2024-04-19)
 
 
