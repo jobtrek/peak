@@ -1,5 +1,16 @@
 # Changelog
 
+## [0.1.11](https://github.com/jobtrek/peak/compare/v0.1.10...v0.1.11) (2024-05-13)
+
+
+### Build System
+
+* **deps-dev:** bump laravel/pint from 1.15.2 to 1.15.3 ([#90](https://github.com/jobtrek/peak/issues/90)) ([ece0c8d](https://github.com/jobtrek/peak/commit/ece0c8d722cc77e042ea8b64b2554e1a099405d7))
+* **deps:** bump chrisreedio/socialment from 3.6.1 to 3.8.0 ([#92](https://github.com/jobtrek/peak/issues/92)) ([0c16060](https://github.com/jobtrek/peak/commit/0c16060a4a73695967717cd3f2403ae72e375cd9))
+* **deps:** bump laravel/framework from 10.48.9 to 10.48.10 ([#88](https://github.com/jobtrek/peak/issues/88)) ([a90a96b](https://github.com/jobtrek/peak/commit/a90a96b2ec91e02d4d0afa0a977c6e69e09f4566))
+* **deps:** bump laravel/horizon from 5.24.3 to 5.24.4 ([#89](https://github.com/jobtrek/peak/issues/89)) ([1fef41a](https://github.com/jobtrek/peak/commit/1fef41a842d46b60abb8c20b3c8f95c747f6b060))
+* **deps:** bump laravel/pulse from 1.0.0-beta16 to 1.1.0 ([#94](https://github.com/jobtrek/peak/issues/94)) ([4ce6e37](https://github.com/jobtrek/peak/commit/4ce6e37c6c217ef08b3a6db85358f5bb5bda60bc))
+
 ## [0.1.10](https://github.com/jobtrek/peak/compare/v0.1.9...v0.1.10) (2024-05-03)
 
 
