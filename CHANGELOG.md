@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.1.12](https://github.com/jobtrek/peak/compare/v0.1.11...v0.1.12) (2024-05-22)
+
+
+### Build System
+
+* **deps-dev:** bump mockery/mockery from 1.6.11 to 1.6.12 ([#99](https://github.com/jobtrek/peak/issues/99)) ([929e3e0](https://github.com/jobtrek/peak/commit/929e3e0d1d238d0b6ac251587930c2766ef70fe4))
+* **deps-dev:** bump spatie/laravel-ignition from 2.6.0 to 2.7.0 ([#96](https://github.com/jobtrek/peak/issues/96)) ([33883a4](https://github.com/jobtrek/peak/commit/33883a436b3daaf417e4beb70671857144239f4f))
+* **deps:** bump bezhansalleh/filament-shield from 3.2.4 to 3.2.5 ([#97](https://github.com/jobtrek/peak/issues/97)) ([0679230](https://github.com/jobtrek/peak/commit/06792305836dfec72e09d43648407fc52ccfe0cb))
+* **deps:** bump filament/filament from 3.2.73 to 3.2.80 ([#98](https://github.com/jobtrek/peak/issues/98)) ([e79b2d8](https://github.com/jobtrek/peak/commit/e79b2d84120029602c03e84a5ba3b99939972fb2))
+
 ## [0.1.11](https://github.com/jobtrek/peak/compare/v0.1.10...v0.1.11) (2024-05-13)
 
 
